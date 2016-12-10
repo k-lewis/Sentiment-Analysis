@@ -1,20 +1,11 @@
-
-# coding: utf-8
-
-# In[1]:
-
 import numpy as np
 import re
 
-
-# In[11]:
-
+#load the positive and negative reviews
 fpos = open("/Users/marcia/Documents/ec503/processed_acl/books/positive.review", 'r')
 fneg = open("/Users/marcia/Documents/ec503/processed_acl/books/negative.review", 'r')
 
-
-# In[12]:
-
+# finds unique words 
 docNo=1
 Doclist=[]
 wordlist=[]
@@ -47,7 +38,7 @@ fpos.close()
 fneg.close()
 
 
-# In[13]:
+# write the labels
 
 flabel = open('book_Label.txt', 'w')
 for item in label:
@@ -55,46 +46,20 @@ for item in label:
 flabel.close()
 
 
-# In[5]:
+# Create the vocabulary
 
 wordIDlist=[]
 for word in wordlist:
     wordid = uniqueWordList.index(word)
     wordIDlist.append(wordid)
-
-
-# In[6]:
-
 fvocab = open('book_vocabList.txt', 'w')
 for item in uniqueWordList:
   fvocab.write("%s\n" % item)
 fvocab.close()
 
-
-# In[7]:
-
+#Create the bag of words format
 DataSet= list(zip(Doclist, wordIDlist, numlist))
-
-
-# In[8]:
-
 f = open('book_DataSet.txt', 'w')
 for item in DataSet:
   f.write("%s %s %s\n" % item)
 f.close()
-
-
-# In[9]:
-
-len(uniqueWordList)
-
-
-# In[10]:
-
-len(DataSet)
-
-
-# In[ ]:
-
-
-
