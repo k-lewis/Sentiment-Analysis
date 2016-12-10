@@ -1,0 +1,26 @@
+% setup MatConvNet
+addpath('/home/marcia/matconvnet-1.0-beta23/matlab')
+run  vl_setupnn
+
+% load the pre-trained CNN
+load('/home/marcia/EC503_CNN-SA/Sentiment-Analysis/data/processedData_10fold_cv_MR/net-epoch-1000.mat')
+net = dagnn.DagNN.loadobj(net) ;
+net.mode = 'test' ;
+
+% load and preprocess an image
+load('/home/marcia/EC503_CNN-SA/Sentiment-Analysis/data/data_MR.mat')
+[~,~,~,noOfTestData] = size(xTest);
+im = single(xTest) ; % note: 0-255 range
+% run the CNN
+for i = 1:noOfTestData
+    net.eval({'input', im(:,:,:,i)});
+    % obtain the CNN otuput
+    scores = net.vars(net.getVarIndex('x_fc_relu_out')).value ;
+    scores = squeeze(gather(scores)) ;
+    % show the classification results
+    [bestScore(i), best(i)] = max(scores);
+%     display(i)
+%     display(bestScore)
+%     display(best)
+end
+C = confusionmat(yTest,best);
