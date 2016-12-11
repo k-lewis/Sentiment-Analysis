@@ -105,7 +105,7 @@ for i = 1: 2000
 
     if doc_label == 1
         if length(index) <= 650
-            cd('/Users/silvia/Documents/Courses/2016/503/Project/CNN-for-Sentence-Classification-in-Keras-master/book_reviews/acl_dataset/documents/pos');
+            cd('/Users/silvia/Documents/Courses/2016/503/Project/book_reviews/acl_dataset/documents/pos');
 
             filename = ['document' num2str(i) '.txt'];
             fileID = fopen(filename,'a');
@@ -121,7 +121,7 @@ for i = 1: 2000
     else
         if length(index) <= 650
             length_neg(i) = length(index); 
-            cd('/Users/silvia/Documents/Courses/2016/503/Project/CNN-for-Sentence-Classification-in-Keras-master/book_reviews/acl_dataset/documents/neg'); 
+            cd('/Users/silvia/Documents/Courses/2016/503/Project/book_reviews/acl_dataset/documents/neg'); 
             filename = ['document' num2str(i) '.txt'];
             fileID = fopen(filename,'a');
         
