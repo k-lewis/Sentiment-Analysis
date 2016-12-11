@@ -22,17 +22,4 @@ for fileName in list_of_files:
     fout.writelines("\n")
     fout.close()
     
-#list_of_files = glob.glob('./test/neg/*.txt')
-#i = 0
-#for fileName in list_of_files:
-#    i = i + 1
-#    print(i)
-#    fin = open( fileName, "r" )
-#    data_list = fin.readlines()
-#    fin.close() # closes file
-#    
-#    fout = open("neg.txt", "a")
-#    fout.writelines(data_list)
-#    fout.writelines("\n")
-#    fout.close()
-#    
+   
