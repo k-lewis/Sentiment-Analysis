@@ -26,19 +26,6 @@ num_filters = 150
 dropout_prob = (0.25, 0.5)
 hidden_dims = 150
 
-* it turns out that such a small data set as "Movie reviews with one
-sentence per review"  (Pang and Lee, 2005) requires much smaller network
-than the one introduced in the original article:
-- embedding dimension is only 20 (instead of 300; 'CNN-static' still requires ~100)
-- 2 filter sizes (instead of 3)
-- higher dropout probabilities and
-- 3 filters per filter size is enough for 'CNN-non-static' (instead of 100)
-- embedding initialization does not require prebuilt Google Word2Vec data.
-Training Word2Vec on the same "Movie reviews" data set is enough to 
-achieve performance reported in the article (81.6%)
-
-** Another distinct difference is slidind MaxPooling window of length=2
-instead of MaxPooling over whole feature map as in the article
 """
 
 import numpy as np
