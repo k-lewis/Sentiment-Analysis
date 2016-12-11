@@ -13,6 +13,11 @@ Save the vocabulary, dataset, and labels as separate .mat files in the same dire
 Run SVM_linear_5fold.m, SVM_linear_10fold.m, SVM_rbf_5fold.m, or SVM_rbf_10fold.m
 
 CNN
+Prepossing: 
+1. Use save_reviews_pos.py and save_reviews_neg.py to saves individual reviews into one file.
+2. Use train_preprocess.py to get the static embedding.
+3. Use import_data.m to convert sentences to 2D dataset.
+
 To run the CNN, install MatConvNet: http://www.vlfeat.org/matconvnet/quick/
 Under Matlab-MatConvNet folder 
 run books_main_routine.m to train the network
@@ -32,6 +37,11 @@ Running the Code:
 First, make sure all files are in the same directory. Run the generate_features.m file to generate the feature matrices for positive and negative samples. Save the feature_matrix_pos and feature_matrix_neg variables in the workspace as .mat files; these will be loaded by the remaining .m files. Once the .mat files have been created, any of the SVM files can be run in the same directory. 
 
 CNN
+
+Prepossing: 
+1. Use train_preprocess.py to get the static embedding.
+2. Use import_data.m to convert sentences to 2D dataset.
+
 To run the CNN, install MatConvNet: http://www.vlfeat.org/matconvnet/quick/
 Under Matlab-MatConvNet folder 
 run MR_main_routine.m to train the network
