@@ -43,12 +43,12 @@ def load_data_and_labels():
 #        fin.close() # closes file    
     
     
-    positive_examples = list(open("./subjectivity data/objective_5000").readlines())
+    positive_examples = list(open("./Silvia/subjectivity data/objective_5000").readlines())
     #positive_examples = list(open("./big data/neg.txt").readlines())    
     #print(positive_examples[0])
     print(positive_examples[1])
     positive_examples = [s.strip() for s in positive_examples]
-    negative_examples = list(open("./subjectivity data/subjective_5000").readlines())
+    negative_examples = list(open("./Silvia/subjectivity data/subjective_5000").readlines())
     negative_examples = [s.strip() for s in negative_examples]
     # Split by words
     x_text = positive_examples + negative_examples
