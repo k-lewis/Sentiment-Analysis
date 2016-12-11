@@ -5,27 +5,6 @@ http://arxiv.org/pdf/1408.5882v2.pdf
 ""
 Original taken from: https://github.com/alexander-rakhlin/CNN-for-Sentence-Classification-in-Keras/blob/master/trainGraph.py
 ""
-For 'CNN-non-static' gets to 82.1% after 61 epochs with following settings:
-embedding_dim = 20          
-filter_sizes = (3, 4)
-num_filters = 3
-dropout_prob = (0.7, 0.8)
-hidden_dims = 100
-
-For 'CNN-rand' gets to 78-79% after 7-8 epochs with following settings:
-embedding_dim = 20          
-filter_sizes = (3, 4)
-num_filters = 150
-dropout_prob = (0.25, 0.5)
-hidden_dims = 150
-
-For 'CNN-static' gets to 75.4% after 7 epochs with following settings:
-embedding_dim = 100          
-filter_sizes = (3, 4)
-num_filters = 150
-dropout_prob = (0.25, 0.5)
-hidden_dims = 150
-
 """
 
 import numpy as np
