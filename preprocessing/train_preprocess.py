@@ -2,7 +2,9 @@
 Train convolutional network for sentiment analysis. Based on
 "Convolutional Neural Networks for Sentence Classification" by Yoon Kim
 http://arxiv.org/pdf/1408.5882v2.pdf
-
+""
+Original: https://github.com/alexander-rakhlin/CNN-for-Sentence-Classification-in-Keras/blob/master/trainGraph.py
+""
 For 'CNN-non-static' gets to 82.1% after 61 epochs with following settings:
 embedding_dim = 20          
 filter_sizes = (3, 4)
